@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="8dp"
+    tools:context=".CampusActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginBottom="5dp"
+            app:cardBackgroundColor="@color/ThemeColorOne"
+            android:radius="20dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="75px"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.5" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/beaconDistancesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scanning for beacons..."
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"/>
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/floorImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="Floor Image" />
+
+        <!-- User position marker -->
+        <View
+            android:id="@+id/userPositionMarker"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@drawable/position_marker"
+            android:visibility="invisible" />
+
+        <!-- Beacon markers -->
+        <View
+            android:id="@+id/beacon1Marker"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:background="@drawable/location_red"
+            android:visibility="invisible" />
+
+        <View
+            android:id="@+id/beacon2Marker"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:background="@drawable/location_red"
+            android:visibility="invisible" />
+
+        <View
+            android:id="@+id/beacon3Marker"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:background="@drawable/location_red"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+
+
+
+    <Button
+        android:id="@+id/navigateButton"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/ThemeColorOne"
+        android:text="Navigate"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+</LinearLayout>

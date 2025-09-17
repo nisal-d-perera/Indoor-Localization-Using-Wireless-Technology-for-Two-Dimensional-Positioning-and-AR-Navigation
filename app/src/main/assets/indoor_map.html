@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Indoor SVG Map</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+    <style>
+        html, body, #map {
+            height: 100%;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="map"></div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+<script>
+    var map = L.map('map', {
+        center: [0, 0],
+        zoom: 1,
+        crs: L.CRS.Simple  // Use Simple CRS for SVG/indoor
+    });
+
+    var bounds = [[0,0], [400,350]]; // Adjust based on your SVG dimensions
+
+    // Add SVG as an image overlay
+    var image = L.imageOverlay("my_map.svg", bounds).addTo(map);
+    map.fitBounds(bounds);
+
+    const marker = L.marker([100, 100]).addTo(map)
+            .bindPopup("Room A")
+            .openPopup();
+</script>
+</body>
+</html>

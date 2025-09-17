@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <SurfaceView
+        android:id="@+id/cameraPreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+<!--<FrameLayout-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:id="@+id/main"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent">-->
+
+<!--    &lt;!&ndash; Camera preview background &ndash;&gt;-->
+<!--    <SurfaceView-->
+<!--        android:id="@+id/cameraPreview"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent" />-->
+
+    <!-- Overlay for arrow + distance -->
+<!--    <FrameLayout-->
+<!--        android:id="@+id/overlay_container"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+
+<!--        &lt;!&ndash; Rotating arrow &ndash;&gt;-->
+<!--        <ImageView-->
+<!--            android:id="@+id/arrow_iv"-->
+<!--            android:layout_width="64dp"-->
+<!--            android:layout_height="64dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:src="@drawable/ic_arrow_head_24"-->
+<!--            android:visibility="gone"/>-->
+
+<!--        &lt;!&ndash; Distance text at bottom &ndash;&gt;-->
+<!--        <TextView-->
+<!--            android:id="@+id/distance_tv"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="bottom|center_horizontal"-->
+<!--            android:layout_marginBottom="32dp"-->
+<!--            android:textColor="#FFFFFF"-->
+<!--            android:textSize="18sp"-->
+<!--            android:visibility="gone"/>-->
+<!--    </FrameLayout>-->
+</FrameLayout>
